@@ -1,19 +1,20 @@
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Nursery Leaf</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid">
+                <Link className="navbar-brand" to="#">Nursery Leaf</Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">About</a>
-                        <a class="nav-link" href="#">Gallery</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="#">Add Nursery</a>
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <Link className="nav-link" aria-current="page" to="#">Home</Link>
+                        <Link className="nav-link" to="#">About</Link>
+                        <Link className="nav-link" to="#">Gallery</Link>
+                        <Link className="nav-link" to="#">Contact</Link>
+                        <Link className="nav-link" to="addnursery">Add Nursery</Link>
                     </div>
                 </div>
             </div>

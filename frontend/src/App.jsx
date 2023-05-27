@@ -1,13 +1,16 @@
 import './App.css'
 import Home from './Pages/Home'
-import Banner from './components/Banner'
-
+import { Routes, Route } from 'react-router-dom';
+import AddNursery from './components/AddNursery';
 
 function App() {
 
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/addnursery' element={<AddNursery/>}></Route>
+      </Routes>
     </>
   )
 }
