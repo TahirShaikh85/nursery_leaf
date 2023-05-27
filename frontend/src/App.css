@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: transparent;
+  padding: 20px !important;
+}
+.navbar-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  font-size: 1.2rem;
+  margin: 0 .5rem;
+} 
+
+.navbar-nav a:hover {
+  color: orange;
+}
+
+.navbar-brand {
+  color: orange;
+  font-size: 35px;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.srch {
+  font-family: 'Times New Roman';
+  width: 130px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid orange;
+  margin-top: 0px;
+  color: #fff;
+  border-right: none;
+  font-size: 16px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.btnn {
+  width: 60px;
+  height: 30px;
+  background: orange;
+  border: 2px solid orange;
+  margin-top: 0px;
+  color: white;
+  font-size: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.srch:focus {
+  outline: none;
+}
+main {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(./assets/1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+main .leftside {
+  margin-top: 10rem;
+}
+
+.leftside h3.hello {
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  color: aliceblue;
+  text-align: left;
+}
+
+.leftside h3.hello::after {
+  content: "";
+  width: 450px;
+  height: 3px;
+  position: absolute;
+  top: 43%;
+  left: 9%;
+  background-color: white;
+}
+
+.leftside h1 {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 70px;
+  margin-bottom: 25px;
+}
+
+.leftside h2 {
+  color: #fff;
+  margin-bottom: 35px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.leftside .btn {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: center;
+  padding: 8px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 30px;
+  display: inline-block;
+  margin-left: 50px;
+  color: #fff;
+  letter-spacing: 0;
+  background: green;
+  border: double 2px transparent;
+  box-shadow: 0 10px 30 px rgba(118, 85, 225, .3);
+}
