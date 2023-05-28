@@ -2,3 +2,9 @@ backend/config.js
 backend/node_modules
 frontend/node_modules
 
+frontend/src/assets/2.jpg
+.gitignore
+frontend/src/assets/3.jpg
+frontend/src/assets/4.jpg
+frontend/src/assets/5.jpg
+.gitignore
