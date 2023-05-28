@@ -46,7 +46,7 @@ exports.newNersery = async (req, res) => {
         const savedNersery = await newNersery.save();
 
         // return response
-        res.status(200).send(savedNersery)
+        res.status(200).send("New Nursery Added successfully...!")
 
     } catch (error) {
         res.status(500).send("Error while creating new Nersey");
