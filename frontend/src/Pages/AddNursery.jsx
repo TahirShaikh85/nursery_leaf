@@ -4,6 +4,7 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from '../components/Navbar';
+import { Base_URL } from '../config';
 
 const AddNursery = () => {
     const [nurseryData, setNurseryData] = useState({
@@ -48,7 +49,7 @@ const AddNursery = () => {
 
         try {
 
-            const response = await axios.post('http://localhost:3000/api/newNersery', formData, {
+            const response = await axios.post(`${Base_URL}/newNersery`, formData, {
                 headers: {
                     "Content-Type": 'multipart/form-data'
                 }
