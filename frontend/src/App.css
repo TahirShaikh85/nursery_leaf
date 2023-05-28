@@ -249,6 +249,13 @@ main .leftside {
   background: transparent;
   color: #000;
   border: 2.4px solid green;
+  transition: .5s;
+}
+/* call now hover */
+.displayNursery-container .displayNursery .nursery-details .details .call-to-action .call-now:hover{
+  background: green;
+  color: #fff;
+  border: none;
 }
 .displayNursery-container .displayNursery .nursery-details .details .call-to-action .view-map {
   padding: 0.6rem 1.1rem;
@@ -256,6 +263,13 @@ main .leftside {
   background: green;
   color: #fff;
   border: none;
+  transition: .5s
+}
+/* view map hover */
+.displayNursery-container .displayNursery .nursery-details .details .call-to-action .view-map:hover{
+  background: transparent;
+  color: #000;
+  border: 2.4px solid green;
 }
 .displayNursery-container .displayNursery .nursery-details .details .call-to-action i{
   font-size: 1.2rem;

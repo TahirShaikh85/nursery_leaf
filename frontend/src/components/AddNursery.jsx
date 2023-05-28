@@ -9,6 +9,7 @@ const AddNursery = () => {
     const [nurseryData, setNurseryData] = useState({
         name: "",
         address: "",
+        phoneNum: "",
         latitude: "",
         longitude: "",
         image: null
@@ -16,9 +17,10 @@ const AddNursery = () => {
 
     const handleChange = (e) => {
         if (e.target.name === 'image') {
+            const files = Array.from(e.target.files);
             setNurseryData({
                 ...nurseryData,
-                [e.target.name]: e.target.files[0]
+                [e.target.name]: files
             });
         } else {
             setNurseryData({
@@ -34,9 +36,15 @@ const AddNursery = () => {
         const formData = new FormData();
         formData.append('name', nurseryData.name);
         formData.append('address', nurseryData.address);
+        formData.append('phoneNum', nurseryData.phoneNum);
         formData.append('latitude', nurseryData.latitude);
         formData.append('longitude', nurseryData.longitude);
-        formData.append('image', nurseryData.image);
+
+        // Append each image file to the FormData object
+        for (let i = 0; i < nurseryData.image.length; i++) {
+            formData.append('image', nurseryData.image[i]);
+        }
+
 
         try {
 
@@ -50,6 +58,7 @@ const AddNursery = () => {
             // reset form
             document.getElementById('nameField').value = "";
             document.getElementById('addressField').value = "";
+            document.getElementById('phoneField').value = "";
             document.getElementById('latitudeField').value = "";
             document.getElementById('longitudeField').value = "";
             document.getElementById('imageField').value = "";
@@ -66,7 +75,7 @@ const AddNursery = () => {
 
     return (
         <>
-        <Navbar/>
+            <Navbar />
             <div className="nurseryPage">
                 <div className="add-nersery" >
                     <ToastContainer
@@ -93,16 +102,21 @@ const AddNursery = () => {
                                 <input name='address' type='text' className="form-control" id="addressField" onChange={handleChange} placeholder='Enter Nursery Address' required minLength={15} />
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="latitudeField" className="col-form-label">Latitude</label>
-                                <input name='latitude' type="text" id="latitudeField" className="form-control" aria-labelledby="passwordHelpInline" onChange={handleChange} placeholder='Enter Latitude coordinates' required />
+                                <label htmlFor="phoneField" className="col-form-label">Phone Number</label>
+                                <input name='phoneNum' type="text" id="phoneField" className="form-control" aria-labelledby="passwordHelpInline" onChange={handleChange} placeholder='Enter Phone Number' required />
                             </div>
-                            <div className="mb-4">
-                                <label htmlFor="longitudeField" className="col-form-label">Longitude</label>
-                                <input name='longitude' type="text" id="longitudeField" className="form-control" aria-labelledby="passwordHelpInline" onChange={handleChange} placeholder='Enter Longitude coordinates' required />
+                            <div class="mb-4 row g-3 align-items-center">
+                                <label htmlFor="latitudeField" className="col-form-label">Latitude & Longitude</label>
+                                <div class="col-auto mt-0">
+                                    <input name='latitude' type="text" id="latitudeField" className="form-control" aria-labelledby="passwordHelpInline" onChange={handleChange} placeholder='Enter Latitude coordinates' required />
+                                </div>
+                                <div class="col-auto mt-0">
+                                    <input name='longitude' type="text" id="longitudeField" className="form-control" aria-labelledby="passwordHelpInline" onChange={handleChange} placeholder='Enter Longitude coordinates' required />
+                                </div>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="imageField" className="form-label">Select Nursery Image</label>
-                                <input name='image' className="form-control" type="file" id="imageField" onChange={handleChange} required />
+                                <input name='image' className="form-control" type="file" id="imageField" onChange={handleChange} required multiple accept="image/*" max="6" />
                             </div>
                             <div className="mb-4">
                                 <button type="submit" className='nursery-btn btn btn-primary'>Add Nursery</button>
