@@ -5,7 +5,7 @@ import Search from '../components/Search'
 const Home = () => {
   return (
     <main>
-      <Navbar />
+      <Navbar linkColor={"white"} />
       <Search />
       <div className="leftside">
         <h3></h3>

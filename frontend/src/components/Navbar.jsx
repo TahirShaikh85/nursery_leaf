@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({linkColor}) => {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="#">Nursery Leaf</Link>
+                <NavLink className="navbar-brand" to="#">Nursery Leaf</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <Link className="nav-link" aria-current="page" to="#">Home</Link>
-                        <Link className="nav-link" to="#">About</Link>
-                        <Link className="nav-link" to="#">Gallery</Link>
-                        <Link className="nav-link" to="#">Contact</Link>
-                        <Link className="nav-link" to="addnursery">Add Nursery</Link>
+                        <NavLink className={`nav-link ${linkColor}`} to="/">Home</NavLink>
+                        <NavLink className={`nav-link ${linkColor}`} to="/about">About</NavLink>
+                        <NavLink className={`nav-link ${linkColor}`} to="/gallery">Gallery</NavLink>
+                        <NavLink className={`nav-link ${linkColor}`} to="/contact">Contact</NavLink>
+                        <NavLink className={`nav-link ${linkColor}`} to="/addnursery">Add Nursery</NavLink>
                     </div>
                 </div>
             </div>
