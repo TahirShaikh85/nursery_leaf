@@ -11,6 +11,7 @@ const Navbar = ({linkColor}) => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <NavLink className={`nav-link ${linkColor}`} to="/">Home</NavLink>
+                        <NavLink className={`nav-link ${linkColor}`} to="/products">Products</NavLink>
                         <NavLink className={`nav-link ${linkColor}`} to="/about">About</NavLink>
                         <NavLink className={`nav-link ${linkColor}`} to="/gallery">Gallery</NavLink>
                         <NavLink className={`nav-link ${linkColor}`} to="/contact">Contact</NavLink>

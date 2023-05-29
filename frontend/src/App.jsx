@@ -5,6 +5,7 @@ import AddNursery from './Pages/AddNursery';
 import About from './Pages/About';
 import Gallery from './Pages/Gallery';
 import Contact from './Pages/Contact';
+import Products from './Pages/Products';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/products' element={<Products/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/gallery' element={<Gallery/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
